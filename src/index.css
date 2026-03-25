@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap');
+
+@layer base {
+  :root {
+    --background: 45 30% 97%;
+    --foreground: 230 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 25% 12%;
+
+    --primary: 245 58% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 25% 92%;
+    --secondary-foreground: 230 25% 12%;
+
+    --muted: 45 18% 90%;
+    --muted-foreground: 230 10% 46%;
+
+    --accent: 162 63% 41%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 18% 87%;
+    --input: 45 18% 87%;
+    --ring: 245 58% 51%;
+
+    --radius: 0.75rem;
+
+    /* Extended palette */
+    --coral: 12 76% 61%;
+    --coral-foreground: 0 0% 100%;
+    --sky: 199 89% 48%;
+    --sky-foreground: 0 0% 100%;
+    --amber: 38 92% 50%;
+    --amber-foreground: 0 0% 100%;
+    --teal: 162 63% 41%;
+    --teal-foreground: 0 0% 100%;
+    --violet: 245 58% 51%;
+    --violet-foreground: 0 0% 100%;
+    --rose: 346 77% 55%;
+    --rose-foreground: 0 0% 100%;
+
+    --success: 162 63% 41%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(245 58% 51%), hsl(199 89% 48%));
+    --gradient-card-1: linear-gradient(135deg, hsl(245 58% 51% / 0.08), hsl(199 89% 48% / 0.05));
+    --gradient-card-2: linear-gradient(135deg, hsl(162 63% 41% / 0.08), hsl(38 92% 50% / 0.05));
+    --gradient-card-3: linear-gradient(135deg, hsl(12 76% 61% / 0.08), hsl(346 77% 55% / 0.05));
+    --gradient-sidebar: linear-gradient(180deg, hsl(230 35% 15%), hsl(245 40% 20%));
+
+    --sidebar-background: 230 35% 15%;
+    --sidebar-foreground: 230 20% 80%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 230 35% 15%;
+    --sidebar-accent: 245 40% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 230 30% 22%;
+    --sidebar-ring: 162 63% 41%;
+    --sidebar-muted: 230 20% 45%;
+
+    --font-display: 'DM Serif Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  .dark {
+    --background: 230 25% 7%;
+    --foreground: 45 20% 92%;
+    --card: 230 25% 11%;
+    --card-foreground: 45 20% 92%;
+    --popover: 230 25% 11%;
+    --popover-foreground: 45 20% 92%;
+    --primary: 245 58% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 230 20% 18%;
+    --secondary-foreground: 45 20% 92%;
+    --muted: 230 20% 18%;
+    --muted-foreground: 230 15% 55%;
+    --accent: 162 55% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 230 20% 20%;
+    --input: 230 20% 20%;
+    --ring: 245 58% 60%;
+    --sidebar-background: 230 30% 10%;
+    --sidebar-foreground: 230 15% 75%;
+    --sidebar-primary: 245 58% 60%;
+    --sidebar-primary-foreground: 230 25% 7%;
+    --sidebar-accent: 230 25% 16%;
+    --sidebar-accent-foreground: 45 20% 92%;
+    --sidebar-border: 230 20% 18%;
+    --sidebar-ring: 162 55% 45%;
+    --sidebar-muted: 230 15% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .gradient-sidebar {
+    background: var(--gradient-sidebar);
+  }
+  .subject-card-1 {
+    background: var(--gradient-card-1);
+    border-color: hsl(245 58% 51% / 0.15);
+  }
+  .subject-card-2 {
+    background: var(--gradient-card-2);
+    border-color: hsl(162 63% 41% / 0.15);
+  }
+  .subject-card-3 {
+    background: var(--gradient-card-3);
+    border-color: hsl(12 76% 61% / 0.15);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
